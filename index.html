@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="portfolio, rejuanul islam">
+    <meta name="description" content="Frontend Developer with a passion for innovation and a love for transforming code into captivating user interfaces">
     <title>Portfolio | Rejuanul Islam</title>
+    
+    <!-- Font-awesome cdn here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Start -->
@@ -15,6 +31,7 @@
         <p>Aside from my digital endeavors, I'm passionate about exploring the open road, finding new adventures through travel, and savoring the thrill of driving.</p>
     </header>
     <!-- Header End -->
+    <hr>
 
     <main>
     <!-- Skills and Expertise Start -->
@@ -51,6 +68,25 @@
                 </ul>
             </li>
         </ol>
+
+        <div>
+            <h3>Skill Progress</h3>
+            <label for="htmlprogress">HTML: </label>
+            <progress id="htmlprogress" value="90" max="100">95%</progress><br><br>
+            <label for="cssprogress">CSS: </label>
+            <progress id="cssprogress" value="85" max="100">85%</progress><br><br>
+            <label for="javaprogress">JavaScript: </label>
+            <progress id="javaprogress" value="55" max="100">55%</progress><br><br>
+            <label for="bootstrap">Bootstrap: </label>
+            <progress id="bootstrap" value="90" max="100">90%</progress><br><br>
+            <label for="gitprogress">Git: </label>
+            <progress id="gitprogress" value="80" max="100">80%</progress><br><br>
+        </div>
+        <div>
+            <h3>Experience level</h3>
+            <label for="experiencelevel">Experience: </label>
+            <meter id="experiencelevel" min="0" max="10" value="3">2 years</meter>
+        </div>
     </section>
     <!-- Skills and Expertise End -->
 
@@ -87,7 +123,7 @@
     <!-- Education and Experience Start -->
     <section>
         <h3>My Education and Experience</h3>
-        <table style="border: 2px solid #000; border-spacing: 10px; width: 700px; text-align: center;">
+        <table border="1" cellspacing="0" cellpadding="10" style="border: 2px solid #000; width: 800px; text-align: center;">
             <thead>
                 <tr>
                     <th>Institution/Company</th>
@@ -99,7 +135,11 @@
                 <tr>
                     <td>Fiverr (freelance)</td>
                     <td>Frontend Developer (Level 2)</td>
-                    <td>2023-2024</td>
+                    <td rowspan="2">2023-2024</td>
+                </tr>
+                <tr>
+                    <td>Upwork (freelance)</td>
+                    <td>Frontend Developer</td>
                 </tr>
                 <tr>
                     <td>Premier University</td>
@@ -121,24 +161,65 @@
         </table>
     </section>
     <!-- Education and Experience End -->
+
+    <!-- Video section start -->
+    <section>
+        <br>
+        <video width="320" controls autoplay loop muted>
+            <source src="assets/vid/coding-vid.mp4" type="video/mp4">
+            Your browser do not support this type of video 
+        </video>
+    </section>
+    <!-- Video section end -->
     
     <!-- Contact Form Start -->
     <section>
         <h3>Contact Me</h3>
-        <form action="contact-form" method="post">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
+        <form action="https://formspree.io/f/moqggopl" method="POST">
+            <div>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+            </div>
+            
+            <div>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+            </div>
+            
+            <div>
+                <label for="age">Age:</label><br>
+                <input type="number" id="age" name="age" min="18" max="40" required><br><br>
+            </div>
+
+            <div>
+                <label for="website">Website:</label><br>
+                <input type="url" id="website" name="website" required><br><br>
+            </div>
+
+            <div>
+                <label for="image">Upload Image:</label><br>
+                <input type="file" id="image" name="image" accept="image/*"><br><br>
+            </div>
+            
+            <div>
+                <label for="subject">Subject:</label><br>
+                <select name="subject" id="subject">
+                    <option value="inquiry">Inquiry</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="jobopportunities">Job opportunities</option>
+                </select><br><br>
+            </div>
+            
+            <div>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+            </div>
+            
     
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-    
-            <label for="subject">Subject:</label><br>
-            <input type="text" id="subject" name="subject" required><br><br>
-    
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-    
-            <input type="submit" value="Submit">
+            <div>
+                <button type="submit" value="Submit">Submit</button>
+                <button type="clear" value="Clear">Clear</button>
+            </div>
         </form>
     </section>
     <!-- Contact Form End -->
@@ -149,6 +230,27 @@
         <p>Copyright reserved by &copy; Rejuanul Islam</p>
         <a href="tel:+8801600000000">&#9743; Call me</a>
         <a href="mailto:rejuanhossain8@gmail.com">&#128231; Email me</a>
+
+        <div>
+        <h3>Follow me</h3>
+        <ul>
+            <li>
+                <a target="_blank" href="https://www.facebook.com/rejuan.hossain.16/">
+                    <i class="fa-brands fa-facebook"></i> Facebook Profile
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="https://www.linkedin.com/in/s-m-rejuanul-islam-082a90252/">
+                    <i class="fa-brands fa-linkedin"></i> Linkedin Profile
+                </a>
+            </li>
+        </ul>
+        </div>
+
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4238.039428038828!2d91.82205853946722!3d22.37524200546185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1718729758948!5m2!1sen!2sbd" width="300" height="250" title="Home map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
     </footer>
    
 </body>
