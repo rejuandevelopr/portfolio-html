@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+:root {
+    --color-black: #000;
+    --color-white: #fff;
+    --offblack: #272116;
+    --head-font: 32px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container-max {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.section-padding {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+/* Nav start */
+.nav {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: var(--color-white);
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 24px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}
+
+.logopart-One {
+    color: #3C3B3F;
+}
+
+.logopart-two {
+    color: #605C3C;
+}
+
+.nav-link {
+    padding: 8px 18px;
+    color: var(--color-black);
+    line-height: normal;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+}
+
+.nav-link:hover {
+    color: #605C3C;
+}
+
+#ecommerceHero {
+    background-image: url('images/hero-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+#ecommerceHero::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00000064;
+    z-index: -1;
+}
+
+.head-one {
+    font-size: 44px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 150%;
+    font-family: "Inter", sans-serif;
+}
+
+.head-two {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 150%;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+@media screen and (max-width:992px) {
+    .nav-flex {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-link {
+        padding: 6px 12px;
+    }
+}
+
+/* Section Css */
+.sectionHead {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--color-black);
+    line-height: 220%;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+
+.sectionTitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-black);
+    line-height: 120%;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+
+/* Product css start */
+.product-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.Product {
+    border: 1px solid #000;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 18px;
+}
+
+.product-card {
+    padding: 18px;
+}
+
+.product-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--color-black);
+    line-height: 180%;
+    text-align: start;
+    font-family: "Inter", sans-serif;
+}
+
+.card-image img {
+    width: 100%;
+    max-width: 420px;
+    max-height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+.product-rating {
+    line-height: 220%;
+}
+
+.product-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-black);
+    line-height: 140%;
+    text-align: start;
+    font-family: "Open Sans", sans-serif;
+}
+
+.product-price {
+    font-size: 38px;
+    font-weight: bold;
+    color: var(--color-black);
+    line-height: 220%;
+    text-align: start;
+    font-family: "Open Sans", sans-serif;
+}
+
+.btn {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-white);
+    line-height: 120%;
+    background-color: var(--color-black);
+    padding: 8px 20px;
+    border-radius: 12px;
+    font-family: "Open Sans", sans-serif;
+}
+/* Product css end */
+
+
+/* Footer start */
+#footer {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    background-color: var(--offblack);
+    color: var(--color-white);
+    font-family: "Inter", sans-serif;
+}
