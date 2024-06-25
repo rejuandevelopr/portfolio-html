@@ -176,19 +176,46 @@
     <section>
         <h3>Contact Me</h3>
         <form action="https://formspree.io/f/moqggopl" method="POST">
-            <div>
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
-            </div>
+
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+                </div>
+                
+                <div>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                </div>
+                
+                <div>
+                    <label for="age">Age:</label><br>
+                    <input type="number" id="age" name="age" min="18" max="40" required><br><br>
+                </div>
+            </fieldset><br>
             
+
             <div>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+                <label for="favorite">Favorite color:</label><br>
+                <input type="color" id="favorite" name="favorite" value="#ff0000" required><br><br>
             </div>
-            
+
             <div>
-                <label for="age">Age:</label><br>
-                <input type="number" id="age" name="age" min="18" max="40" required><br><br>
+                <label for="experience">Experience:</label><br>
+                <input type="range" id="experience" name="experience" min="0" max="10" required><br><br>
+            </div>
+
+            <div>
+                <label for="programming">Favorite programming:</label><br>
+                <input list="languages" id="programming" name="programming" required><br><br>
+                <datalist id="languages">
+                    <option value="c">C</option>
+                    <option value="c+">C+</option>
+                    <option value="python">Python</option>
+                    <option value="java">java</option>
+                    <option value="javascript">Javascript</option>
+                </datalist>
             </div>
 
             <div>
