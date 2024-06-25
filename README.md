@@ -1,3 +1,3 @@
 Advance Html live - https://portfolio-html-advance.vercel.app/
 
-Basic Css live - 
+Basic Css live - https://css-project-opal.vercel.app/
